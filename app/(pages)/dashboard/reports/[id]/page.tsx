@@ -170,6 +170,10 @@ export default function ReportDetailPage() {
               <h1 className="text-2xl font-bold text-gray-900">{report.title}</h1>
               <p className="text-sm text-gray-500 mt-1">oleh {report.user?.name} • {new Date(report.createdAt).toLocaleString('id-ID')}</p>
               <p className="text-sm text-gray-500 mt-1">Jenis laporan: <span className="font-medium text-gray-900">{translateReportType(report.type)}</span></p>
+              <div className="mt-3">
+                <h4 className="text-sm font-medium text-gray-900">Deskripsi</h4>
+                <p className="text-sm text-gray-700 mt-1 whitespace-pre-line">{report.description}</p>
+              </div>
             </div>
             <div className="text-right">
               <div className="mb-2">{getStatusBadge(report.status)}</div>
